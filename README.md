@@ -14,7 +14,7 @@ Paper Link
 
 
 # Install
-`pip install lenet5``
+`pip install lenet5`
 
 # Usage
 ```python
