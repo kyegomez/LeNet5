@@ -5,7 +5,7 @@ A simple implementation of LeNet5 for practice for the book "Pytorch Pocket Refe
 
 LeNet is abunch of convolution and linear layers with max pools.
 
-Paper Link
+[Paper Link](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
 
 # Appreciation
 * Lucidrains
