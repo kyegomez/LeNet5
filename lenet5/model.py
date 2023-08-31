@@ -23,5 +23,5 @@ class LeNet5(nn.Module):
         x = self.fc3(x) #applies the linear projection of 84, to 10
         return x
     
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = ("cuda" if torch.cuda.is_available() else "cpu")
 model = LeNet5().to(device=device)
