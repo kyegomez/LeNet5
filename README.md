@@ -32,11 +32,21 @@ print(result.dtype)
 ```
 
 # Architecture
+The `LeNet5` architecture is composed of:
 
-# Todo
-
+=> 2 convolutional layers with varying inc hannels and kernel sizes.
+=> Linear layers
+=> 2x max pool2d layers applied on relu -> convolutional layers(x) 
+=> view, resizes according to -1 and the int of the element of the first dimension
+=> 2 relus on the linear layers respectively
+=> final linear projection
 
 # License
+MIT
 
-# Citations
+# Citation
 
+GradientBased Learning Applied to Document
+Recognition
+Yann LeCun Leon Bottou Yoshua Bengio and Patrick Hafner
+http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf
