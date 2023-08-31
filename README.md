@@ -1,7 +1,7 @@
 [![Multi-Modality](agorabanner.png)](https://discord.gg/qUtxnK2NMf)
 
 # Paper-Implementation-Template
-A simple reproducible template to implement AI research papers 
+A simple implementation of LeNet5 for practice for the book "Pytorch Pocket Reference"
 
 Paper Link
 
