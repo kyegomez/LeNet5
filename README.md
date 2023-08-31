@@ -12,7 +12,6 @@ Paper Link
 * Agorians
 
 
-
 # Install
 `pip install lenet5`
 
@@ -35,10 +34,15 @@ print(result.dtype)
 The `LeNet5` architecture is composed of:
 
 => 2 convolutional layers with varying inc hannels and kernel sizes.
+
 => Linear layers
+
 => 2x max pool2d layers applied on relu -> convolutional layers(x) 
+
 => view, resizes according to -1 and the int of the element of the first dimension
+
 => 2 relus on the linear layers respectively
+
 => final linear projection
 
 # License
