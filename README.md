@@ -21,11 +21,14 @@ Paper Link
 import torch
 from lenet5 import LeNet5
 
-x = torch.randint(0, 10, 10)
+x = torch.randn(1, 3, 32, 32)
 
 model = LeNet5()
 
-model(x)
+result = model(x)
+print(result)
+print(result.shape)
+print(result.dtype)
 ```
 
 # Architecture

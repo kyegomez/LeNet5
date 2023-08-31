@@ -13,11 +13,13 @@ class LeNet5(nn.Module):
         self.fc3 = nn.Linear(84, 10)#in_feats=84, out_feats=10
 
     def forward(self, x):
-        x = F.max_pool2d(F.relu(self.conv1(x))) #applies a max_pool2d(input: tensor(minibatch, in_channels, iH, iW)) op on the relu on the conv and applies it on x
+        x = F.max_pool2d(F.relu(self.conv1(x)), (2, 2)) #applies a max_pool2d(input: tensor(minibatch, in_channels, iH, iW)) op on the relu on the conv and applies it on x
         x = F.max_pool2d(F.relu(self.conv2(x)), 2) #applies a max_pool2s op(input: tensor(minibatch, in_channels, iH, IW) op on the relu of the 2nd conv layer which has more in channels + out channels on x tensor)
+
         x = x.view(-1, int(x.nelement() / x.shape[0])) #view(*shape(returns a new tensor with the same data but a different shape)) were the shape is -1, the nelement of x, and the first dim of x
         x = F.relu(self.fc1(x)) #applies rectified linear unit on the fc1 layer applied on x
         x = F.relu(self.fc2(x)) #applies relu on the fc2 layer applied on the x tensor
+
         x = self.fc3(x) #applies the linear projection of 84, to 10
         return x
     

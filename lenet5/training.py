@@ -1,7 +1,9 @@
 from torch import optim
 from torch import nn
-from lenet5.model import LeNet5 as model
+from lenet5.model import LeNet5
 from lenet5.model import device
+
+model = LeNet5()
 
 loss = nn.CrossEntropyLoss() # init cross entropy 
 optim = optim.SGD(model.parameters(), lr=0.001, momentum=0.9) # init stochastic gradient descent with the model parameters, don't forget to init the () after parameters, learning rate = 0.001, momentum factor = 0.9 
